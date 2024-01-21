@@ -1,4 +1,19 @@
+import dotenv from "dotenv";
 import express from "express";
+import mongoose from "mongoose";
+
+dotenv.config();
+
+mongoose
+  .connect(process.env.MB_URL)
+  .then(() => {
+    console.log("mb connected");
+  })
+  .catch((err) => {
+    console.log("err:", err);
+  });
+
+// NABfIWacc4mrdWyC
 
 const app = express();
 const PORT = 3000;
