@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 dotenv.config();
 
 mongoose
-  .connect(process.env.MB_URL)
+  .connect(process.env.MD_DATABASE_URL)
   .then(() => {
     console.log("mb connected");
   })
